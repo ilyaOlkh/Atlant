@@ -897,6 +897,10 @@ button {
   position: relative;
 }
 
+.buildings-slider__ceil {
+  height: auto;
+}
+
 .buildings-slider__ceil:nth-child(odd) .buildings-slider__ceil-inner .buildings-slider__img {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -911,6 +915,13 @@ button {
   position: relative;
   -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.1s;
+       -o-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  height: 100%;
 }
 
 .buildings-slider__content {
@@ -970,6 +981,145 @@ button {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.buildings-slider .slick-active {
+  height: auto;
+}
+
+.slick-active .buildings-slider__ceil-inner {
+  height: 100%;
+}
+
+.buildings-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.buildings-slider__img {
+  -webkit-transition-property: -webkit-box-ordinal-group;
+  transition-property: -webkit-box-ordinal-group;
+  -o-transition-property: order;
+  transition-property: order;
+  transition-property: order, -webkit-box-ordinal-group, -ms-flex-order;
+}
+
+.buildings-slider__animation-delay .buildings-slider__ceil-inner {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.buildings-slider__animation-delay .buildings-slider__img {
+  -webkit-transition-delay: 1s;
+       -o-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.buildings-slider__animation-even .buildings-slider__ceil-inner {
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: buildings-slider__even;
+          animation-name: buildings-slider__even;
+}
+
+.buildings-slider__animation-even .buildings-slider__ceil-inner .buildings-slider__img {
+  -webkit-box-ordinal-group: 0 !important;
+      -ms-flex-order: -1 !important;
+          order: -1 !important;
+}
+
+.buildings-slider__animation-odd .buildings-slider__ceil-inner {
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: buildings-slider__odd;
+          animation-name: buildings-slider__odd;
+}
+
+.buildings-slider__animation-odd .buildings-slider__ceil-inner .buildings-slider__img {
+  -webkit-box-ordinal-group: 1 !important;
+      -ms-flex-order: 0 !important;
+          order: 0 !important;
+}
+
+@-webkit-keyframes buildings-slider__even {
+  from {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  49.999999% {
+    grid-template-rows: 1fr 0fr;
+  }
+
+  50% {
+    grid-template-rows: 0fr 1fr;
+  }
+
+  to {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@keyframes buildings-slider__even {
+  from {
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  49.999999% {
+    -ms-grid-rows: 1fr 0fr;
+    grid-template-rows: 1fr 0fr;
+  }
+
+  50% {
+    -ms-grid-rows: 0fr 1fr;
+    grid-template-rows: 0fr 1fr;
+  }
+
+  to {
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@-webkit-keyframes buildings-slider__odd {
+  from {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  49.999999% {
+    grid-template-rows: 0fr 1fr;
+  }
+
+  50% {
+    grid-template-rows: 1fr 0fr;
+  }
+
+  to {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@keyframes buildings-slider__odd {
+  from {
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  49.999999% {
+    -ms-grid-rows: 0fr 1fr;
+    grid-template-rows: 0fr 1fr;
+  }
+
+  50% {
+    -ms-grid-rows: 1fr 0fr;
+    grid-template-rows: 1fr 0fr;
+  }
+
+  to {
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 @media (min-width: 26.5625em) {
@@ -1148,6 +1298,18 @@ button {
   .slider .slick-dots li button {
     width: 0.625rem;
     height: 0.625rem;
+  }
+
+  .buildings-slider__ceil:nth-child(odd) .buildings-slider__ceil-inner .buildings-slider__img {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
+  .buildings-slider__ceil:nth-child(3n+2) .buildings-slider__ceil-inner .buildings-slider__img {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
 }
 
