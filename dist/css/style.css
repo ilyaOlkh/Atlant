@@ -991,9 +991,6 @@ button {
           flex: 1 1 100%;
 }
 
-.no-webp .footer__input-submit{
-  background-image: url("../img/telegram.png"); }
-
 .footer__input-submit {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 0.6875rem;
@@ -1001,6 +998,7 @@ button {
   width: 0.6875rem;
   height: 0.6875rem;
   background-color: rgba(255, 255, 255, 0);
+  background-image: url("../img/telegram.svg");
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
@@ -2875,5 +2873,3 @@ button {
     min-width: 219px;
   }
 }
-
-.webp .footer__input-submit{ background-image: url(../img/telegram.webp); }
