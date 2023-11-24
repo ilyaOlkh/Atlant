@@ -3882,6 +3882,12 @@ html {
   left: 0;
 }
 
+.offer picture:has(.offer__decor2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .blog {
   padding-top: 3.125rem;
   padding-bottom: 3.125rem;
@@ -4311,16 +4317,6 @@ html {
     -webkit-column-gap: 8.125rem;
        -moz-column-gap: 8.125rem;
             column-gap: 8.125rem;
-  }
-}
-
-@media (min-width: 115.75em) {
-  .portfolio .portfolio__image img {
-    width: 27.8125rem;
-  }
-
-  .portfolio__image img {
-    width: 27.8125rem;
   }
 }
 
