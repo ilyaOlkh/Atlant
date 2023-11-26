@@ -1720,6 +1720,10 @@ button {
   padding: 0;
 }
 
+button {
+  border: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1962,13 +1966,13 @@ html {
           transform: translate(0, -50%);
   right: 0;
   padding-bottom: 4.375rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
   z-index: 5;
 }
 
 .header__title {
-  font-size: 3.75rem;
+  font-size: 3.125rem;
   font-weight: 800;
   line-height: 122.5%;
   z-index: 5;
@@ -3091,6 +3095,10 @@ html {
   position: relative;
 }
 
+.buildings-slider .slick-dots {
+  bottom: 0.3125rem;
+}
+
 .buildings-slider__ceil {
   height: auto;
 }
@@ -3128,7 +3136,7 @@ html {
           flex-direction: column;
   gap: 1.0625rem;
   position: relative;
-  padding: 6.1875rem 1.75rem;
+  padding: 3.125rem 1.75rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3450,7 +3458,7 @@ html {
           align-items: start;
   position: relative;
   gap: 2.75rem;
-  padding-bottom: 5rem;
+  padding-bottom: 0rem;
   z-index: 2;
 }
 
@@ -3691,6 +3699,10 @@ html {
   line-height: normal;
 }
 
+.portfolio__button {
+  z-index: 1;
+}
+
 .portfolio__contact-decor {
   position: absolute;
   -webkit-transform: rotate(180deg);
@@ -3698,6 +3710,7 @@ html {
           transform: rotate(180deg);
   bottom: 0;
   left: 0;
+  z-index: 0;
 }
 
 .stages__container {
@@ -4465,6 +4478,14 @@ html {
     gap: 4.375rem;
   }
 
+  .buildings-slider__content {
+    padding: 6.1875rem 1.75rem;
+  }
+
+  .buildings-slider .slick-dots {
+    bottom: 1.25rem;
+  }
+
   .advantages__container {
     padding-top: 8.5rem;
     gap: 6.8125rem;
@@ -4472,6 +4493,10 @@ html {
 
   .advantages__title {
     font-size: 3.125rem;
+  }
+
+  .estimate__content {
+    padding-bottom: 5rem;
   }
 
   .estimate__block {
